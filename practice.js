@@ -192,12 +192,12 @@ var user2 = {
 //Let's say I, the user, decided to change my name and email address to the following
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
-  //Code Here
+user2.name = "Tyler S. McGinnis";
+user2.email = "tyler.mcginnis@devmounta.in";
 
 //Now call the sayEmail method that's on the user object which will alert the users email
 
-  //Code Here
-
+//user2.sayEmail();
 
 
 
@@ -208,18 +208,26 @@ var user2 = {
 
 //Create an empty object called methodCollection.
 
-  //Code Here
+var methodCollection = {
+    
+}
 
 /*Now add two methods (functions that are properties on objects) to your methodCollection
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
  which logs 'hello' to the console. */
 
-  //Code Here
+methodCollection.alertHello = function() {
+    alert("hello");
+}
+methodCollection.logHello = function () {
+    console.log("hello");
+}
 
 //Now call your alertHello and logHello methods.
 
-  //Code Here
 
+//methodCollection.alertHello();
+//methodCollection.logHello();
 
 
 //NEXT PROBLEM
@@ -229,9 +237,14 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called makePerson which takes in name, birthday, ssn as its
 // parameters and returns a new object with all of the information that you passed in.
 
-  //Code Here
-
-
+function makePerson(name, birthday, ssn) {
+    var person = {
+        name: name,
+        birthday: birthday,
+        ssn: ssn
+    }
+    return person;
+}
 
 //NEXT PROBLEM
 
@@ -239,17 +252,32 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 // Create a function called makeCard which takes in cardNumber, expirationDate, and securityCode to make a Credit Card object and returns that object so that whenever you invoke makeCard, you get a brand new credit card.
 
-  //Code Here
-
+function makeCard(cardNumber, expirationDate, securityCode) {
+    var creditCard = {
+        cardNumber: cardNumber,
+        expirationDate: expirationDate,
+        securityCode: securityCode
+    }
+    return creditCard;
+}
 
 
 //NEXT PROBLEM
 
-
+var newPerson = makePerson("Casey", "April 22nd", "235325")
 
 /* As of this point you should have a makePerson and a makeCard function which returns you either a person or a credit card object.
    Now, create a bindCard function that takes in a person object as its first parameter and a creditcard object as its second parameter.
    Have bindCard merge the two parameters together into a new object which contains all the properties from the person as well as the creditcard. While Object.assign would give you the answer, specRunner requires an answer without using it.
 */
 
-  //Code Here
+function bindCard(person, creditCard) {
+    var personAndCard = {};
+    for(var key in person) {
+        personAndCard[key] = person[key];
+    }
+    for(var key in creditCard) {
+        personAndCard[key] = creditCard[key];
+    }
+    return personAndCard;
+}
