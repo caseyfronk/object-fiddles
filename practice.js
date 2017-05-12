@@ -7,7 +7,7 @@ var me = {
     name: "Casey",
     age: 23
 }
-alert(me.name);
+//alert(me.name);
 
 
 
@@ -66,7 +66,7 @@ backPack.color = "black";
 
 //After you do the above, alert your entire backPack object.
 
-alert(backPack);
+//alert(backPack);
 /*You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console. */
@@ -94,7 +94,7 @@ var alsoMe = {
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
 for(var key in alsoMe) {
-    alert(alsoMe[key]);
+//    alert(alsoMe[key]);
 }
 
 //NEXT PROBLEM
@@ -104,12 +104,19 @@ for(var key in alsoMe) {
 
 //Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
 
-  //Code Here
+var album = {
+    track1: "2min 30sec",
+    track2: "3min 52sec",
+    track3: "4min 4sec",
+    track4: "2min 48sec",
+    track5: "5min 20sec"
+}
 
 //Now, loop through your album object alerting every song title individually.
 
-  //Code Here
-
+for(var key in album) {
+//    alert(album[key])
+}
 
 
 
@@ -120,12 +127,21 @@ for(var key in alsoMe) {
 
 //Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
 
-  //Code Here
+var states = {
+    utah: 2000000,
+    cali: 20,
+    colorado: 37,
+    newYork: 23050350,
+    idaho: 2
+}
 
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
-  //Code Here
-
+for(var key in states) {
+    if(states[key] > 30000) {
+//        alert(states[key]);
+    }
+}
 
 
 
@@ -145,12 +161,15 @@ var user1 = {
 /*Above you're given a user object. Loop through the user object checking to make sure
 that each value is truthy. If it's not truthy, remove it from the object. */
 
-  //Code Here
-
+for(var key in user1) {
+    if(!user1[key]) {
+        delete user1[key];
+    }
+}
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
-  //Code Here
-
+user1.name = "Casey Fronk";
+user1.username = "caseyfronk";
 
 
 
