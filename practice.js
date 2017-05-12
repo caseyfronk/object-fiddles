@@ -53,18 +53,25 @@ Set the value of that key to 'chapstick'.
 Using dot notation, add another key (or property) to your backPack object
 that is named color, with the value being the color of your backpack. */
 
-  //Code here
+var backPack = {
+    
+}
+
+var item = "firstPocket";
+
+backPack[item] = "chapstick";
+
+backPack.color = "black";
+
 
 //After you do the above, alert your entire backPack object.
 
-  //Code here
-
+alert(backPack);
 /*You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console. */
 
-  //Code here
-
+console.log(backPack);
 
 
 
@@ -75,14 +82,20 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 //Create an 'alsoMe' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
 
-  //Code Here
-
+var alsoMe = {
+    name: "Casey",
+    age: 23,
+    height: "5ft 11in",
+    gender: "Male",
+    married: false,
+    eyeColor: "Green",
+    hairColor: "Red"
+}
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
-  //Code Here
-
-
-
+for(var key in alsoMe) {
+    alert(alsoMe[key]);
+}
 
 //NEXT PROBLEM
 
